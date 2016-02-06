@@ -13,6 +13,7 @@
 
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -58,7 +59,7 @@
 
 <section id="top" name="top">
   <div  class="container" >
-    <div class="row text-center">
+    <div class="row text-center animated fadeIn">
       <img src="images/carlaefabio.png"/>
     </div>
     <div class="row">
@@ -75,7 +76,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-offset-2">
-        <div class="super-title">
+        <div class="super-title" id="bigdaytitle">
           <h1 class="gray">The Big</h1>
           <h1 class="green">Day</h1>
         </div>
@@ -121,35 +122,7 @@
 </section>
 
 <section id="location" name="location">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-offset-2">
-        <div class="super-title">
-          <h1 class="pink">Maps</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-offset-2 col-md-4">
-        <div class="map-title bold">
-          <h2>The Wedding Ceremony</h2>
-        </div>
-        <div class="embed-responsive embed-responsive-4by3">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2299.25123844091!2d-7.9980415662605555!3d39.55438029959532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd180fcdc962c0bf%3A0x9c10e7182c2cb874!2sR.+do+Adro+36%2C+6120+Ma%C3%A7%C3%A3o%2C+Portugal!5e0!3m2!1spt-PT!2sie!4v1454269299986" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="col-md-offset-1 col-md-4">
-        <div class="map-title bold">
-          <h2>The Reception</h2>
-        </div>
-        <div class="embed-responsive embed-responsive-4by3">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.4320019046377!2d-8.162757084632245!3d39.48215877948471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd186ce6a3395fdf%3A0x1c365ea9897569eb!2sQuinta+d&#39;+Oliveiras!5e0!3m2!1spt-PT!2sie!4v1454269444074" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div id="map_canvas" class="mapping embed-responsive" style="height: 100%; width: 100%" ></div>
 </section>
 
 <section id="getting_there" name="getting_there">
@@ -242,6 +215,7 @@
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
 <script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/parallax.js/parallax.min.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 

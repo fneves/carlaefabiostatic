@@ -113,11 +113,15 @@ html {
 .strip-gray {
   background-color: lighten(#67655D, 30%);
   padding-top: 30px;
-  min-height: 150px;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
+  height: 100%;
   h2 {
     font-size: 3em;
   }
+}
+
+#location {
+  padding-top: 0px;
 }
 
 #details {
@@ -180,7 +184,7 @@ html {
 
 section {
   padding-top: 60px;
-  height:100vh;
+  height:94vh;
   width: 98.8vw;
 }
 
