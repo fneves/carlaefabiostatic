@@ -1,0 +1,127 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Sacramento);
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+html {
+  background: url('../images/background.png') no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#next-section {
+  font-size: 4em;
+}
+
+#gift {
+  margin: 30px;
+  font-size: 5em;
+}
+
+#map-below {
+  font-size: 2em;
+}
+
+.small-title {
+  font-family: 'Sacramento', cursive;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.super-title{
+  h1 {
+    font-size: 120px;
+    font-weight: 700;
+  }  
+  padding-bottom: 40px;
+}
+
+.pad-left {
+  padding-left: 5px;
+}
+
+.pad-top {
+  padding-top: 5px;
+}
+
+.blue {
+  color: #577492;
+}
+.pink {
+  color: #EB91A9;
+}
+
+.dark-pink {
+  color: #E67697;
+}
+
+.gray {
+  color: lighten(#67655D, 30%);
+}
+
+.green {
+  color: #84F25C;
+}
+
+.white {
+  color: white;
+}
+
+.strip-gray {
+  background-color: lighten(#67655D, 30%);
+  padding-top: 30px;
+  min-height: 150px;
+  padding-bottom: 30px;
+  h2 {
+    font-size: 3em;
+  }
+}
+
+#details {
+  border-top: 1px;
+  border-top-color: black;
+  background-color: white;
+  min-height: 400px;
+}
+
+#getting_there{
+  background-image: url('../images/walk.jpeg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+}
+
+#location {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+#rsvp {
+  background-image: url('../images/rsvp.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+}
+section {
+  height:100vh;
+  width: 100vw;
+}
