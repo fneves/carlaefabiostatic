@@ -1,5 +1,6 @@
 $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
+@import "_variables";
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
@@ -16,7 +17,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 /* Space out content a bit */
 body {
   padding-top: 100px;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -29,7 +30,13 @@ html {
 }
 
 #next-section {
-  font-size: 4em;
+  font-size: 6em;
+  position: absolute;
+  bottom: 100px;
+}
+
+#next-section-link {
+  padding-left: 30px;
 }
 
 #gift {
@@ -43,7 +50,19 @@ html {
 
 .small-title {
   font-family: 'Sacramento', cursive;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.sacramento {
+  font-family: 'Sacramento', cursive;
+}
+
+.normal {
   font-size: 38px;
+}
+
+.bold {
   font-weight: bold;
 }
 
@@ -72,6 +91,7 @@ html {
 
 .dark-pink {
   color: #E67697;
+
 }
 
 .gray {
@@ -84,6 +104,10 @@ html {
 
 .white {
   color: white;
+}
+
+.pink-orange {
+  color: $pink-orange;
 }
 
 .strip-gray {
@@ -104,24 +128,102 @@ html {
 }
 
 #getting_there{
-  background-image: url('../images/walk.jpeg');
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
-}
-
-#location {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  background: url('../images/path2.jpg') no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #rsvp {
-  background-image: url('../images/rsvp.jpg');
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
+  display: block;
+  position: relative;
 }
+
+.rsvp-background {
+  background: url('../images/rsvp.jpg') no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-filter: brightness(78%) contrast(95%);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.rsvp-content {
+  h2 {
+    font-size: 3em;
+  }
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 2em;
+  color: white;
+  z-index: 999;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.rsvp-description {
+  margin-top: 7%;
+  font-size: 2em;
+}
+
+.map-title {
+  margin-bottom: 20px;
+}
+
 section {
+  padding-top: 60px;
   height:100vh;
-  width: 100vw;
+  width: 98.8vw;
+}
+
+#mauritius {
+  margin-top: 60px;
+}
+
+.getting-there-description {
+  margin-top: 100px;
+  font-size: 18px;
+}
+
+.contacts {
+  margin-top: 21%;
+}
+
+#website-navigation {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $link-color;
+  color: $link-hover-color;
+}
+
+.nav {
+
+  li{
+    border-right: solid 1px lighten(#67655D, 30%);
+
+    a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  li:last-of-type {
+    border-right: hidden;
+  }
+  a {
+    font-weight: 600;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
