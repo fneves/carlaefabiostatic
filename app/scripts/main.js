@@ -88,11 +88,16 @@ function initialize() {
     // Info Window Content
     var infoWindowContent = [
         ['<div class="info_content">' +
-        '<h3>Igreja Matriz</h3>' +
-        '<p>The London Eye is a giant Ferris wheel situated on the banks of the River Thames. The entire structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft).</p>' +        '</div>'],
+          '<h3>Igreja Matriz de Mação</h3>' +
+          '<p>The church where the ceremony will happen</p>' +
+          '<p>GPS: 39.553900, -7.998413</p>' +
+          '<a href="https://goo.gl/maps/RfStUsGU3DQ2" target="_blank">Open in Google Maps</a>' +
+        '</div>'],
         ['<div class="info_content">' +
-        '<h3>Quinta D\'Oliveiras</h3>' +
-        '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
+          '<h3>Quinta D\'Oliveiras</h3>' +
+          '<p>The reception will take place here</p>' +
+          '<p>GPS: 39.4821629,-8.1627624</p>' +
+          '<a href="https://goo.gl/maps/gjebeKPd8eP2" target="_blank">Open in Google Maps</a>' +
         '</div>']
     ];
 
