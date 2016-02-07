@@ -11,6 +11,7 @@ before_script:
 
 stages:
   - build
+  - deploy
 
 
 job1:
@@ -21,3 +22,15 @@ job1:
     - master
   tags:
     - ruby
+
+pages:
+  stage: deploy
+  script:
+  - mkdir .public
+  - cp -r dist/* .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+  - pages
