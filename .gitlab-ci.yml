@@ -15,4 +15,3 @@ job1:
     - master
   tags:
     - ruby
-    - docker
