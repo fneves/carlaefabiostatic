@@ -1,6 +1,7 @@
 image: ruby:2.2
 
 before_script:
+  - apt-get update
   - apt-get install npm
   - npm install -g grunt
   - npm install -g grunt-cli
