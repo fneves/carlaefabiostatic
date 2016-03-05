@@ -23,6 +23,12 @@
   <script src="/bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
 
+  <!-- build:js scripts/vendor/l10n.js -->
+  <script src="/bower_components/webL10n/l10n.js"></script>
+  <!-- endbuild -->
+
+  <link rel="prefetch" type="application/l10n" href="assets/data.ini" />
+
 </head>
 <body data-spy="scroll" data-target="#navbar-container">
 <!--[if lt IE 10]>
@@ -46,12 +52,16 @@
       <div class="col-md-offset-3" id="navbar-container">
         <ul class="nav navbar-nav">
           <li><a href="#top" class="anchor">Home</a></li>
-          <li><a href="#details" class="anchor">Details</a></li>
-          <li><a href="#location" class="anchor">Maps</a></li>
-          <li><a href="#getting_there" class="anchor">Getting There</a></li>
-          <li><a href="#gifts" class="anchor">Gifts</a></li>
+          <li><a href="#details" class="anchor" data-l10n-id="details">Details</a></li>
+          <li><a href="#location" class="anchor" data-l10n-id="maps">Maps</a></li>
+          <li><a href="#getting_there" class="anchor" data-l10n-id="getting_there">Getting There</a></li>
+          <li><a href="#gifts" class="anchor" data-l10n-id="gifts">Gifts</a></li>
           <li><a href="#rsvp" class="anchor">RSVP</a></li>
         </ul>
+      </div>
+      <div class="pull-right">
+        <button id="pt">PT</button>
+        <button id="en"/>EN</button>
       </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -77,8 +87,8 @@
     <div class="row">
       <div class="col-md-offset-2">
         <div class="super-title" id="bigdaytitle">
-          <h1 class="gray">The Big</h1>
-          <h1 class="green">Day</h1>
+          <h1 class="gray" data-l10n-id="the_big">The Big</h1>
+          <h1 class="green" data-l10n-id="day">Day</h1>
         </div>
       </div>
     </div>
@@ -87,17 +97,16 @@
   <div class="strip-gray">
     <div class="container">
       <div class="col-md-offset-2 col-md-4 white">
-        <h2 class="small-title"><i class="fa fa-clock-o">&nbsp;&nbsp;<span class="green small-title">When</span></i></h2>
+        <h2 class="small-title"><i class="fa fa-clock-o">&nbsp;&nbsp;<span class="green small-title" data-l10n-id="when">When</span></i></h2>
         <diV class="pad-left pad-top">
-          <p>Saturday, September 3rd of 2016</p>
-          <p>Wedding Ceremony:  11:00am</p>
-          <p>Wedding Party: 2:00pm</p>
-          <p>After the cerimony, we will move straight to Quinta D'Oliveiras where the reception and wedding party will happen.</p>
-          <p>Lots of food and drinks are promised!</p>
+          <p data-l10n-id="wedding_date">Saturday, September 3rd of 2016</p>
+          <p data-l10n-id="cerimony_time">Wedding Ceremony:  11:00am</p>
+          <p data-l10n-id="wedding_party">After the cerimony, we will move straight to Quinta D'Oliveiras where the reception and wedding party will happen.</p>
+          <p data-l10n-id="wedding_party2">Lots of food and drinks are promised!</p>
         </div>
       </div>
       <div class="col-md-offset-1 col-md-5 white">
-        <h2><i class="fa fa-map-marker">&nbsp;&nbsp;<span class="green small-title">Where</span></i></h2>
+        <h2><i class="fa fa-map-marker">&nbsp;&nbsp;<span class="green small-title" data-l10n-id="where">Where</span></i></h2>
         <diV class="pad-left pad-top">
           <address>
             <h4>Igreja Matriz Mação</h4>
@@ -115,7 +124,7 @@
         </div>
       </div>
       <div class="pull-right">
-        <a href="#location" class="green anchor"><i class="fa fa-chevron-down" id="map-below">&nbsp;&nbsp;See Map</i></a>
+        <a href="#location" class="green anchor"><i class="fa fa-chevron-down" id="map-below" data-l10n-id="see_map">&nbsp;&nbsp;See Map</i></a>
       </div>
     </div>
   </div>
@@ -130,24 +139,24 @@
     <div class="row">
       <div class="col-md-offset-2">
         <div class="super-title">
-          <h1 class="pink">Getting<br><span class="white">There</span></h1>
+          <h1 class="pink" data-l10n-id="getting">Getting<br><span class="white" data-l10n-id="there">There</span></h1>
         </div>
       </div>
     </div>
     <div class="row getting-there-description">
       <div class="col-md-offset-1 col-md-5 white">
-        <h2 class="small-title"><i class="fa fa-bus"> Transportation</i></h2>
-        <p><a href="http://www.rentalcars.com/Home.do">By Car</a> - We recommend you to rent a car and follow the <a href="http://www.viamichelin.co.uk/web/Routes?departure=Aeroporto%20de%20Lisboa%2C%20Portugal&arrival=Rua%20do%20Adro%2C%206120%20Ma%C3%A7%C3%A3o%2C%20Portugal&index=0&vehicle=0&type=&distance=km&currency=EUR&avoidClosedRoad=&motorway=true&toll=&vignette=&orc=&crossing=true&caravan=&car=hatchback&fuel=petrol&fuelCost=1.36&allowance=&corridor=">driving instructions</a></p>
-        <p><a href="http://www.cp.pt/passageiros/en/">By Train</a> - If coming from Lisbon, select Lisboa Oriente as the departure, and Abrantes as Destination.</p>
+        <h2 class="small-title"><i class="fa fa-bus"></i>&nbsp;<span data-l10n-id="transportation">Transportation</span></h2>
+        <p><a href="http://www.rentalcars.com/Home.do" data-l10n-id="by_car">By Car</a> - <span data-l10n-id="car_recommendation">We recommend you to rent a car and follow the </span>&nbsp;<a href="http://www.viamichelin.co.uk/web/Routes?departure=Aeroporto%20de%20Lisboa%2C%20Portugal&arrival=Rua%20do%20Adro%2C%206120%20Ma%C3%A7%C3%A3o%2C%20Portugal&index=0&vehicle=0&type=&distance=km&currency=EUR&avoidClosedRoad=&motorway=true&toll=&vignette=&orc=&crossing=true&caravan=&car=hatchback&fuel=petrol&fuelCost=1.36&allowance=&corridor=" data-l10n-id="driving_instructions">driving instructions</a></p>
+        <p><a href="http://www.cp.pt/passageiros/en/" data-l10n-id="by_train">By Train</a> - <span data-l10n-id="train_recommendation">If coming from Lisbon, select Lisboa Oriente as the departure, and Abrantes as Destination.</span></p>
       </div>
       <div class="col-md-offset-1 col-md-5 white">
-        <h2 class="small-title"><i class="fa fa-home"> Accommodation</i></h2>
-        <p>Near the location you have some great options where to stay:</p>
+        <h2 class="small-title"><i class="fa fa-home"></i>&nbsp;<span data-l10n-id="accommodation">Accommodation</span></h2>
+        <p data-l10n-id="location_suggestions">Near the location you have some great options where to stay:</p>
         <ul class="list-unstyled">
-          <li><a href="http://microsites.juventude.gov.pt/Portal/en/PAbrantes.htm">Abrantes Youth Hostel</a></li>
+          <li><a href="http://microsites.juventude.gov.pt/Portal/en/PAbrantes.htm" data-l10n-id="pousada_abrantes">Abrantes Youth Hostel</a></li>
           <li><a href="http://www.booking.com/hotel/pt/vdf-vale-de-ferreiros.pt-pt.html?aid=318615;label=New_Portuguese_PT_EMEA_19114760785-1Smp_d%2AB7p4G4Uswgx5tLQS75168948385%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg;sid=24aff099048e1f6e2ffce9fd9621402a;dcid=1;checkin=2016-03-29;checkout=2016-04-02;dist=0;group_adults=2;room1=A%2CA;sb_price_type=total;srfid=fa8c025f637d7229b9c6cf442d63f1d95cc06470X1;type=total;ucfs=1&">Vale De Ferreiros</a></li>
           <li><a href="http://www.booking.com/hotel/pt/casa-da-aldeia-constancia.pt-pt.html?aid=318615;label=New_Portuguese_PT_EMEA_19114760785-1Smp_d%2AB7p4G4Uswgx5tLQS75168948385%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg;sid=24aff099048e1f6e2ffce9fd9621402a;dcid=1;checkin=2016-03-29;checkout=2016-04-02;ucfs=1;room1=A,A;srfid=d9e50e6569e27c09883e72ceda1ed2e981ffa4f0X1;highlight_room=">Casa da Aldeia</a></li>
-          <li><a href="http://www.booking.com/searchresults.pt-pt.html?aid=318615;label=New_Portuguese_PT_EMEA_19114760785-1Smp_d*B7p4G4Uswgx5tLQS75168948385%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg;sid=24aff099048e1f6e2ffce9fd9621402a;dcid=1;city=-2156969;hyb_red=1;redirected=1;redirected_from_city=1;source=city;src=city;gclid=Cj0KEQiA5oy1BRDQh6Wd572hsfkBEiQAfdTPCrebuKPvBckDMy69MmHO7W6EGmB4HTwv5-eH7U1p2iAaAuRE8P8HAQ;track_hp_back_button=1#hotel_1102596-back">Other Options</a></li>
+          <li><a href="http://www.booking.com/searchresults.pt-pt.html?aid=318615;label=New_Portuguese_PT_EMEA_19114760785-1Smp_d*B7p4G4Uswgx5tLQS75168948385%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg;sid=24aff099048e1f6e2ffce9fd9621402a;dcid=1;city=-2156969;hyb_red=1;redirected=1;redirected_from_city=1;source=city;src=city;gclid=Cj0KEQiA5oy1BRDQh6Wd572hsfkBEiQAfdTPCrebuKPvBckDMy69MmHO7W6EGmB4HTwv5-eH7U1p2iAaAuRE8P8HAQ;track_hp_back_button=1#hotel_1102596-back" data-l10n-id="other_options">Other Options</a></li>
         </ul>
       </div>
     </div>
@@ -159,7 +168,7 @@
     <div class="row">
       <div class="col-md-offset-2 col-md-10">
         <div class="super-title">
-          <h1>What to <span class="green">Bring</span></h1>
+          <h1><span data-l10n-id="what_to">What to </span><span class="green" data-l10n-id="bring">Bring</span></h1>
         </div>
       </div>
     </div>
@@ -170,8 +179,8 @@
     </div>
     <div class="row">
       <div class="text-center">
-        <p>Honestly, we want just want you there!</p>
-        <p>But, in case you wish to give us something, you can help us with our honeymoon!</p>
+        <p data-l10n-id="just_want_you">Honestly, we want just want you there!</p>
+        <p data-l10n-id="just_in_case">But, in case you wish to give us something, you can help us with our honeymoon!</p>
       </div>
     </div>
     <div class="row" id="mauritius">
@@ -197,8 +206,8 @@
     <div class="row rsvp-description">
       <div class="col-md-offset-2 col-md-9">
         <div class="text-center">
-          <p>Please confirm your presence until 3rd of August of 2016.</p>
-          <p>See you there!</p>
+          <p data-l10n-id="please_confirm">Please confirm your presence until 3rd of August of 2016.</p>
+          <p data-l10n-id="see_you">See you there!</p>
         </div>
       </div>
     </div>

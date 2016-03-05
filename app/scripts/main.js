@@ -131,5 +131,17 @@ function initialize() {
         this.setZoom(12);
         google.maps.event.removeListener(boundsListener);
     });
-
 }
+
+$("#pt").on('click', function(e){
+  document.webL10n.setLanguage('pt-PT');
+});
+
+$("#en").on('click', function(e){
+  document.webL10n.setLanguage('en-US');
+});
+
+window.addEventListener('localized', function() {
+  document.documentElement.lang = document.webL10n.getLanguage();
+  document.documentElement.dir = document.webL10n.getDirection();
+}, false);
