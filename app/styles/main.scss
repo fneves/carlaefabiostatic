@@ -74,10 +74,18 @@ html {
 
 .super-title {
   h1 {
-    font-size: 120px;
+    font-size: 4em;
     font-weight: 700;
   }
   padding-bottom: 30px;
+}
+
+@media (min-width: $screen-md-min) {
+  .super-title {
+    h1 {
+      font-size: 8em;
+    }
+  }
 }
 
 #map-below-box {
@@ -120,17 +128,25 @@ html {
   color: $pink-orange;
 }
 
+.strip-green {
+  background: url('../images/green.jpg') no-repeat center;
+  overflow-y: hidden;
+  h2 {
+    font-size: 3em;
+  }
+  height: 100%;
+}
+
 #strip-green-container {
   padding-top: 10px;
   padding-bottom: 25px;
 }
 
-.strip-green {
-  background: url('../images/green.jpg') no-repeat center;
-  h2 {
-    font-size: 3em;
+@media (min-width: $screen-md-min) {
+  #strip-green-container {
+    padding-top: 30px;
+    padding-bottom: 0px;
   }
-  height: 100%;
 }
 
 #location {
@@ -143,7 +159,7 @@ html {
   background-color: white;
 }
 
-#getting_there{
+#getting_there {
   background: url('../images/path2.jpg') no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -153,23 +169,12 @@ html {
 }
 
 #rsvp {
+  background: url('../images/rsvp2.jpg') no-repeat center;
   display: block;
-  position: relative;
-}
-
-.rsvp-background {
-  background: url('../images/rsvp.jpg') no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  -webkit-filter: brightness(78%) contrast(95%);
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  position: absolute;
-  top:0;
-  left:0;
 }
 
 .rsvp-content {
@@ -188,7 +193,9 @@ html {
 
 .rsvp-description {
   margin-top: 7%;
-  font-size: 2em;
+  font-size: 4em;
+  font-weight: 600;
+  color: white;
 }
 
 .map-title {
@@ -197,8 +204,8 @@ html {
 
 @media (min-width: $screen-md-min) {
   section {
-    height:94vh;
-    width: 98.8vw;
+    height:100vh;
+    width: 100vw;
   }
 }
 
@@ -230,12 +237,37 @@ html {
 }
 
 .getting-there-description {
-  margin-top: 70px;
+  margin-top: 20px;
   font-size: 18px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: $screen-md-min) {
+  .getting-there-description {
+    margin-top: 16%;
+  }
 }
 
 .contacts {
-  margin-top: 21%;
+  color: white;
+  margin-top: 16%;
+  font-size: 1.4em;
+  padding-right: 7px;
+  a {
+    color: $link-hover-color;
+  }
+
+  a:hover {
+    color: $link-color;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .contacts {
+    margin-top: 17%;
+    font-size: 2em;
+    font-weight: 500;
+  }
 }
 
 #website-navigation {
@@ -275,4 +307,9 @@ html {
 
 #en:hover {
   cursor: pointer;
+}
+
+.language-logo {
+  width: 30px;
+  height: 25px;
 }
