@@ -141,6 +141,10 @@ $("#en").on('click', function(e){
   document.webL10n.setLanguage('en-US');
 });
 
+$(document).ready(function(){
+  document.webL10n.setLanguage('pt-PT');
+});
+
 window.addEventListener('localized', function() {
   document.documentElement.lang = document.webL10n.getLanguage();
   document.documentElement.dir = document.webL10n.getDirection();

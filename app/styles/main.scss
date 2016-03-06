@@ -4,7 +4,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700,900);
 @import url(https://fonts.googleapis.com/css?family=Sacramento);
 
 .browsehappy {
@@ -19,6 +19,7 @@ body {
   padding-top: 100px;
   padding-bottom: 60px;
   font-family: 'Raleway', sans-serif;
+  font-weight: 400;
 }
 
 html {
@@ -27,6 +28,11 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
 }
 
 #next-section {
@@ -51,7 +57,7 @@ html {
 .small-title {
   font-family: 'Sacramento', cursive;
   font-size: 45px;
-  font-weight: 600;;
+  font-weight: 400;
 }
 
 .sacramento {
@@ -114,24 +120,17 @@ html {
   color: $pink-orange;
 }
 
-.strip-gray {
-  background-color: lighten(#67655D, 30%);
-  padding-top: 20px;
-  padding-bottom: 40px;
-  height: 100%;
-  h2 {
-    font-size: 3em;
-  }
+#strip-green-container {
+  padding-top: 10px;
+  padding-bottom: 25px;
 }
 
 .strip-green {
-  background: url('../images/green.png') no-repeat center;
-  padding-top: 30px;
-  padding-bottom: 60px;
-  height: 100%;
+  background: url('../images/green.jpg') no-repeat center;
   h2 {
     font-size: 3em;
   }
+  height: 100%;
 }
 
 #location {
@@ -142,7 +141,6 @@ html {
   border-top: 1px;
   border-top-color: black;
   background-color: white;
-  min-height: 400px;
 }
 
 #getting_there{
@@ -151,6 +149,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding-top: 30px;
 }
 
 #rsvp {
@@ -196,10 +195,34 @@ html {
   margin-bottom: 20px;
 }
 
-section {
-  padding-top: 60px;
-  height:94vh;
-  width: 98.8vw;
+@media (min-width: $screen-md-min) {
+  section {
+    height:94vh;
+    width: 98.8vw;
+  }
+}
+
+.logo {
+  margin-bottom: 200px;
+}
+
+#next-section-chevron {
+  display: none;
+}
+
+@media (min-width: $screen-sm-min) {
+  #next-section-chevron {
+    display: block;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  #next-section-chevron {
+    display: block;
+  }
+  .logo {
+    margin-bottom: 50px;
+  }
 }
 
 #mauritius {
@@ -207,7 +230,7 @@ section {
 }
 
 .getting-there-description {
-  margin-top: 100px;
+  margin-top: 70px;
   font-size: 18px;
 }
 
@@ -244,4 +267,12 @@ section {
     margin-left: 10px;
     margin-right: 10px;
   }
+}
+
+#pt:hover {
+  cursor: pointer;
+}
+
+#en:hover {
+  cursor: pointer;
 }
