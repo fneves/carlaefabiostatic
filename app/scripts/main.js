@@ -142,8 +142,10 @@ $("#en").on('click', function(e){
 });
 
 $(document).ready(function(){
+  console.log('loading')
   document.webL10n.setLanguage('pt-PT');
 });
+
 
 window.addEventListener('localized', function() {
   document.documentElement.lang = document.webL10n.getLanguage();
